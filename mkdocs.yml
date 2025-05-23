@@ -1,5 +1,8 @@
-site_name: MkLorum
+site_name: Nishant's Notes
+theme:
+  name: mkdocs
+  color_mode: dark
+  highlightjs: true
 nav:
   - Home: index.md
   - About: about.md
-
