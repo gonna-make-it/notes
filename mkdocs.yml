@@ -4,5 +4,7 @@ theme:
   color_mode: dark
   highlightjs: true
 nav:
-  - Home: index.md
-  - About: about.md
+  - Home: 'index.md'
+  - CppPrimer:
+      - 'Chapter 1': 'cppprimer/ch01.md'
+      - 'Chapter 2': 'cppprimer/ch02.md'
