@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en" data-bs-theme="dark">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <title>Chapter 2 - Nishant's Notes</title>
+        <link href="../../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../../css/fontawesome.min.css" rel="stylesheet">
+        <link href="../../css/brands.min.css" rel="stylesheet">
+        <link href="../../css/solid.min.css" rel="stylesheet">
+        <link href="../../css/v4-font-face.min.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link id="hljs-light" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" disabled>
+        <link id="hljs-dark" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github-dark.min.css" >
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="../..">Nishant's Notes</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbar-collapse" aria-controls="navbar-collapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="nav-item">
+                                <a href="../.." class="nav-link">Home</a>
+                            </li>
+                            <li class="nav-item dropdown">
+                                <a href="#" class="nav-link dropdown-toggle active" aria-current="page" role="button" data-bs-toggle="dropdown"  aria-expanded="false">CppPrimer</a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../ch01/" class="dropdown-item">Chapter 1</a>
+</li>
+                                    
+<li>
+    <a href="./" class="dropdown-item active" aria-current="page">Chapter 2</a>
+</li>
+                                </ul>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ms-md-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href="../ch01/" class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <script src="../../js/darkmode.js"></script>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-bs-toggle="collapse" data-bs-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-body-tertiary">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-bs-level="1"><a href="#variables-and-basic-types" class="nav-link">Variables and Basic Types</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-bs-level="2"><a href="#primitive-built-in-types" class="nav-link">Primitive Built-in Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#variables" class="nav-link">Variables</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#compound-types" class="nav-link">Compound Types</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-bs-level="2"><a href="#const-qualifier" class="nav-link">const Qualifier</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="variables-and-basic-types">Variables and Basic Types</h1>
+<h2 id="primitive-built-in-types">Primitive Built-in Types</h2>
+<p>C++ primitive types include arithmetic types and a special type named void.</p>
+<p>Void type has no associated value and can be used in only a few cases like the return type of a function which does not return any value.</p>
+<h3 id="arithmetic-types">Arithmetic Types</h3>
+<p>Arithmetic types include:</p>
+<ul>
+<li>characters</li>
+<li>integers</li>
+<li>boolean values</li>
+<li>floating point numbers</li>
+</ul>
+<p>Arithmetic types are divided into integral types (integers, characters and boolean) and floating-point types.</p>
+<p>The size of arithmetic types varies across machines. Hence the largest value a type can represent also varies.</p>
+<p>Except for bool and the extended character types, the integral types may be signed or unsigned.</p>
+<ul>
+<li>The types short, int, long and long long are all signed.</li>
+<li>Unlike integral types, there are three distinct character types - char, signed char and unsigned char. Char is not the same type as signed char. But there are still only two representations. The (plain) char type follows one of the two representaions depending on the compiler.</li>
+</ul>
+<p>Deciding which type to use:</p>
+<ul>
+<li>Use an unsigned type when you know that the numbers cannot be negative.</li>
+<li>Use int for integer arithmentic. If int is smaller than the maximum data value, use long long.</li>
+<li>Do not use plain char or bool in arithmetic expressions. Use them only to hold characters or truth values. Computations using char are especially problematic because char is signed on some machines and unsigned on others. If you need a tiny integer, explicitly specify either signed char or unsigned char. </li>
+<li>Use double for floating-point computations; float usually does not have enough precision, and the cost of double-precision calculations versus single-precision is negligible. The precision offered by long double usually is unnecessary and often entails considerable run-time cost.</li>
+</ul>
+<h3 id="type-conversion">Type Conversion</h3>
+<p>Among the operations many types support, there is ability to convert objects of one type to another. It happens automatically when an object of a one type is used where an object of another type is expected.</p>
+<ul>
+<li>If an out of range value is assigned to an unsigned type, the result it the remainder of the value modulo the number of values that type can store.</li>
+<li>If an out of range value is assigned to a signed type, the result is undefined.</li>
+</ul>
+<p><em>Always avoid Udefined and Implementation-defined Behavior.</em></p>
+<p><em>Don't mix signed and unsigned types.</em></p>
+<h3 id="literals">Literals</h3>
+<p>Every litral has a type. The form and value of a literal determine its type.</p>
+<p><strong>Integer and Floating-point Literals</strong></p>
+<ul>
+<li>Integral literals can be written using decimal, octal or hexadecimal notation.</li>
+<li>Integers literals that begin with 0 are octal. Intger literals that begin with 0x or 0X are hexadecimal.</li>
+<li>By default, decimal literals are signed whereas octal and hexadecimal literals can be either signed or unsigned types.</li>
+<li>A decimal literal has the smallest type of int, long, or long long in which the literal’s value fits.</li>
+<li>Octal and hexadecimal literals have the smallest type of int, unsigned int, long, unsigned long, long long, or unsigned long long in which the literal’s value fits.</li>
+<li>It is an error to use a literal that is too large to fit in the largest related type.</li>
+<li>There are no literals of type short.</li>
+<li>Value of a literal is never negative. For example, in -42, the minus sign is not part of the literal. It is an operator that negates the value of its (literal) operand.</li>
+<li>Floating-point literals include either a decimal point or an exponent specified using scientific notation.</li>
+</ul>
+<p><strong>Character and Character String Literals</strong></p>
+<ul>
+<li>A character enclosed within single quotes is a character literal.</li>
+<li>Zero or more characters enclosed within double quotes is a string literal.</li>
+<li>The type of string literal is an array of constant chars.</li>
+<li>The compiler appends the character '\0' to every string literal. Thus size of a string literal is one more than the apparent size.</li>
+<li>Two string literals that appear adjacent to one another and that are separated only by spaces, tabs, or newlines are concatenated into a single literal.</li>
+</ul>
+<p><em>We can override the default type of literal by using prefixes and suffixes.</em></p>
+<p><strong>Boolean Literals</strong></p>
+<p>The words true and false are boolean literals.</p>
+<p><strong>Pointer Literals</strong></p>
+<p>The word nullptr is a pointer literal.</p>
+<h2 id="variables">Variables</h2>
+<p>Variable is a named storage that our program can manipulate. Each variable in C++ has a type. The type determines the size and layout of the variable's memory, the range of values that can be stored in that memory and the set of operations that can be applied to the variable.</p>
+<h3 id="variable-definitions">Variable Definitions</h3>
+<p>A variable definition is a type specifier followed by a comma separated list of variable names and an optional initial value.</p>
+<p><strong>Intialization</strong></p>
+<p>Intialization in C++ is different from assignment, even though they both use similar syntax.</p>
+<p>Intialization happens when a variable is given a value at the time of creation. Assignment obliterates an object's current value and replaces it with a new one.</p>
+<p><strong>List Initialization</strong></p>
+<p>There are several ways to intialize an object:</p>
+<ol>
+<li><code>int cnt = 0;</code></li>
+<li><code>int cnt = {0};</code></li>
+<li><code>int cnt{0};</code></li>
+<li><code>int cnt(0);</code></li>
+</ol>
+<p>The generalized use of curly braces for intialization was added in C++11. It is called list initialization.</p>
+<p><em>The compiler will not let us list initialize variables of built-in type if the initializer might lead to the loss of information.</em></p>
+<p><strong>Default Initialization</strong></p>
+<p>When a variable is defined without an initializer, it is default initialized.</p>
+<p>The default value of an object of built-in types depends on where it is defined. Variable defined outside the scope of any function are initialzed to zero. Variables of built-in types defined inside a function are uninitialized. The value of uninitialized variables is undefined. It is an error to copy or to try to access the value of a variable whose value is undefined.</p>
+<p>Each class controls how we default initialize its objects. It is for the class to decide if we can define objects of that type without initialization. They can supply an appropiate default value. Some classes force that their objects be initialized by forcing compiler to complain.</p>
+<h3 id="variable-declaration-and-definitions">Variable Declaration and Definitions</h3>
+<p><strong>Separate Compilation</strong>: C++ allows us to split a program into several files which can be compiled separately.</p>
+<p>To support separate compilation, C++ differentiates between variable declaration and definition. A declaration makes the name known to the program. A definition creates the associated entity.</p>
+<p>A definition is also a declaration. Apart from providing the name and type of the variable, a definition also allocates storage and may provide the variable with a initial value.</p>
+<p>To provide a declaration which is not a definition we add an extern keyword and may not provide an explicit initializer: <code>extern int i;</code></p>
+<p><em>It is an error to provide an initializer on an extern inside a function.</em></p>
+<p><em>Any declaration that includes an explicit initializer is a definition. We can provide an initializer on a variable defined as extern, but doing so overrides the extern. An extern that has an initializer is a definition: <code>extern double pi = 3.14;</code></em></p>
+<h3 id="scope-of-a-name">Scope of a Name</h3>
+<p>A scope is a part of the program in which a name has a particular meaning. Most scopes in C++ are delimited by curly braces.</p>
+<p>The same name can refer to different entities in different scopes. Names are visible from the point where they are declared until the end of the scope in which the declaration appears.</p>
+<p><strong>Define a variable where it is used for the forst time.</strong></p>
+<p>A name that has been declared in a scope is visible in its nested scopes. Names decalred in the outer scope can be redfined in an inner scope.</p>
+<h2 id="compound-types">Compound Types</h2>
+<p>A compound type is a type that is defined in terms of another type. Pointers and references are two examples of compound types.</p>
+<h3 id="references">References</h3>
+<p><em>The new standard introduces a new type of reference called r-value reference, primarily used inside classes. This discussion is related to l-value reference.</em></p>
+<p>A reference defines an alternate name for an object. If the name of the reference being declared is d, we define a reference type by writing &amp;d.</p>
+<pre><code>int ival = 1024;
+int &amp;refVal = ival;  // refVal refers to (is another name for) ival
+int &amp;refVal2;        // error: a reference must be initialized
+</code></pre>
+<p>A reference must always be intialized. When we define a reference, we bind the reference to the intializer object. We cannot rebind a reference to a different object, thus reference must always be initialized.</p>
+<p><strong>A reference is not an object, rather just a name for an already existing object.</strong> Thus we cannot define references to a reference.</p>
+<p>All operations on a reference are actually operations on the object the reference is bound to.</p>
+<p>The types of reference must be exactly same as the object it is refering to. There are two exceptions. First is const references can bind to non const objects. (Revisit)</p>
+<h3 id="pointers">Pointers</h3>
+<p>A pointer is a compound type that points to another type.</p>
+<ul>
+<li>Like references, pointers are used for indirect access to other objects.</li>
+<li>Unlike reference, a pointer is an object in its own right.</li>
+<li>Pointers can be assigned and copied. A pointer can point to several different objects during its lifetime.</li>
+<li>Unlike reference a pointer need not be initialized when its defined.</li>
+<li>Like other built-in types, pointers defined at block scope have undefined value if they are not initialized.</li>
+</ul>
+<p>A pointer is defined by writing declarator of form *d. The address of operator is used to get the address of an object.</p>
+<p><em>Because references are not objects, they don't have addresses. Thus, we cannot define a pointer to a reference.</em></p>
+<p>The type of a pointer must match to the object it is pointing to. Because the type of the pointer is used to infer the type of the object pointer is poining to. If pointer could point to an object of another type, operations performed on the underlying object will fail. There are two exceptions. First is a pointer to a const can point to a non const object. (Revisit)</p>
+<pre><code>int g = 10;
+double pi = 3.14;
+
+int &amp;iref1 = 10;  // invalid: can't have references to literals
+int &amp;iref2 = pi;  // invalid: types don't match while initialization
+int &amp;iref3 = g;  iref3 = pi; // valid: no initialization, only narrowing assignment
+double &amp;dref1 = pi; dref1 = g; // valid: no initialization, widening assignment
+
+int *iptr1 = &amp;pi;  // invalid: types mismatch
+int *iptr2 = &amp;g;  iptr2 = &amp;pi;  // still invalid: no conversion for pointers
+</code></pre>
+<p>The value (i.e., the address) stored in a pointer can be in one of four states:</p>
+<ol>
+<li>It can point to an object. </li>
+<li>It can point to the location just immediately past the end of an object. (Used in array traversals and iteratorrs; must never be dereferenced.)</li>
+<li>It can be a null pointer, indicating that it is not bound to any object.</li>
+<li>It can be invalid; values other than the preceding three are invalid. Result of accessing an invalid pointer is undefined.</li>
+</ol>
+<p>Pointers in state 2 and 3 are valid, but they do not point to any object. Beahvior when accessing an object via these pointers is undefined.</p>
+<p><strong>Dereference operator</strong> (*) is used to access an object pointed by a pointer. Since dereferencing a pointer yields the object to which the pointer points, we can assign to that object by assigning to the result of dereference. <code>*p = 0</code> assigns 0 to object p is pointing to.</p>
+<p><strong>Key Concept: Some Symbols Have Multiple Meanings</strong>
+Some symbols, such as &amp; and *, are used as both an operator in an expression and as part of a declaration. The context in which a symbol is used determines what the symbol means: </p>
+<pre><code>int i = 42;
+int &amp;r = i;   // &amp; follows a type and is part of a declaration; r is a reference
+int *p;       // * follows a type and is part of a declaration; p is a pointer
+p = &amp;i;       // &amp; is used in an expression as the address-of operator
+*p = i;       // * is used in an expression as the dereference operator
+int &amp;r2 = *p; // &amp; is part of the declaration; * is the dereference operator 
+</code></pre>
+<p>In declarations, &amp; and * are used to form compound types. In expressions, these same symbols are used to denote an operator. Because the same symbol is used with very different meanings, it can be helpful to ignore appearances and think of them as if they were different symbols.</p>
+<p><strong>Null Pointers</strong></p>
+<p>A null pointer does not point to anything. A null pointer can be initialized in the following ways.</p>
+<pre><code>int *p1 = nullptr; // equivalent to int *p1 = 0;
+int *p2 = 0;       // directly initializes p2 from the literal constant 0
+// must #include cstdlib
+int *p3 = NULL;    // equivalent to int *p3 = 0;
+</code></pre>
+<p><em><code>nullptr</code> is a literal with a special type which can be converted to any other pointer type.</em></p>
+<p><em>NULL is a preprocessor vriable defined in cstdlib. Preprocessor variables are handled by preprocessor and are not a part of standard namespace.</em></p>
+<p><strong>Initialize all pointers</strong>: Define a pointer only after the pointed object has been defined. If not possible, initialize the pointer to nullptr.</p>
+<p><strong><code>void*</code> pointers</strong></p>
+<p>The void<em> is a special pointer type which can hold address of any object. The type of the object a void</em> pointer points to is unknown.</p>
+<p>There are only a limited number of things we can do with a void<em> pointer: We can compare it to another pointer, we can pass it to or return it from a function, and we can assign it to another void</em> pointer. We cannot use a void* to operate on the object it addresses—we don’t know that object’s type, and the type determines what operations we can perform on the object.</p>
+<h3 id="understanding-compound-type-declarations">Understanding Compound Type Declarations</h3>
+<p><strong>References to a pointer</strong></p>
+<pre><code>int i = 42;
+int *p;        // p is a pointer to int
+int *&amp;r = p;   // r is a reference to the pointer p
+r = &amp;i; //  r refers to a pointer; assigning &amp;i to r makes p point to i
+*r = 0; //  dereferencing r yields i, the object to which p points; changes i to 0
+</code></pre>
+<p>The easiest way to understand the type of r is to read the definition right to left. The symbol closest to the name of the variable (in this case the &amp; in &amp;r) is the one that has the most immediate effect on the variable’s type. Thus, we know that r is a reference. The rest of the declarator determines the type to which r refers. The next symbol, * in this case, says that the type r refers to is a pointer type. Finally, the base type of the declaration says that r is a reference to a pointer to an int.</p>
+<h2 id="const-qualifier"><code>const</code> Qualifier</h2>
+<p>A const variable's value cannot be changed, thus must always be initialized. A const type can use most but not all of the operations of the non-const type.</p>
+<p>By default, const objects are local to a file. If a const object is initialized from a compile time constant, compiler replaces all the occurences of that variable with its value. To do this replacement compiler must see the definition of the variable and since files are compiled separately, the scope of a const object is limited to the file. Thus same named constants in different files are different in each file.</p>
+<p>If a constant variable has to be shared across files but its initializer is not a compile time constant, it must be defined in exactly one file and can be declared in other files. To define a single instance of cont variable across files, use <code>extern</code> keyword in both its definition and declaration.</p>
+<h3 id="references-to-const">References to <code>const</code></h3>
+<pre><code>const int ci = 1024;
+const int &amp;r1 = ci;   // ok: both reference and underlying object are const
+r1 = 42;              // error: r1 is a reference to const
+int &amp;r2 = ci;         // error: non const reference to a const object
+</code></pre>
+<p>There are two exceptions to the rule that the type of a reference must match the type of the object to which it refers. The first exception is that we can initialize a reference to const from any expression that can be converted to the type of the reference.</p>
+<pre><code>int i = 42;
+const int &amp;r1 = i;      // we can bind a const int&amp; to a plain int object
+const int &amp;r2 = 42;     // ok: r1 is a reference to const
+const int &amp;r3 = r1 * 2; // ok: r3 is a reference to const
+int &amp;r4 = r * 2;        // error: r4 is a plain, non const reference
+</code></pre>
+<h3 id="pointers-and-const">Pointers and <code>const</code></h3>
+<ul>
+<li>Like references, we can define pointers which points to wither const or nonconst types.</li>
+<li>Like const references, a pointer to a const may not be used to change the object it is pointing to. Pointer of a const object can only be stored in a pointer to const.</li>
+</ul>
+<pre><code>const double pi = 3.14;     // pi is const; its value may not change
+double *ptr = &amp;pi;          // error: ptr is plain pointer
+const double *cptr = &amp;pi;   // ok: cptr may point to a const double
+*cptr = 42;                 // error: cannot assign to *cptr
+</code></pre>
+<p>There are two exceptions to the rule that the types of a pointer and the object to which it points must match. The first exception is that we can use a pointer to const to point to a nonconst object.</p>
+<pre><code>double dval = 3.14;       // dval is a double; its value can be changed
+cptr = &amp;dval;             // ok: but can't change dval through cptr
+</code></pre>
+<p><strong><code>const</code> pointers</strong></p>
+<p>Unlike references, pointers are objects. Hence we can have pointers which are themselves constant. A constant pointer must be initialzed and post that its value cannot be changed. We indicate that a pointer is const by putting const keyword after * in its definition.</p>
+<pre><code>int errNumb = 0;
+int *const curErr = &amp;errNumb;  // curErr will always point to errNumb
+const double pi = 3.14159;
+const double *const pip = &amp;pi; // pip is a const pointer to a const object
+</code></pre>
+<p>The fact that a pointer is itself const says nothing about whether we can use the pointer to change the underlying object. Whether we can change that object depends entirely on the type to which the pointer points.</p>
+<p><strong>Top-Level <code>const</code></strong></p>
+<p>We use the term top-level const to indicate that the pointer itself is a const. When a pointer can point to a const object, we refer to that const as a low-level const.</p>
+<p>Top-level consts can appear in any object type i.e. arithmetic, class and pointer types. Low-level consts appear in base type of compound types like references and pointers.</p>
+<pre><code>int i = 0;
+int *const p1 = &amp;i;         // we can't change the value of p1; const is top-level
+const int ci = 42;          // we cannot change ci; const is top-level
+const int *p2 = &amp;ci;        // we can change p2; const is low-level
+const int *const p3 = p2;   // right-most const is top-level, left-most is not
+const int &amp;r = ci;          // const in reference types is always low-level
+</code></pre>
+<p>When we copy an object top-level consts are ignored. While low-level consts are never ignored.</p>
+<h3 id="constexpr-and-constant-expressions"><code>constexpr</code> and Constant Expressions</h3>
+<p>A constant expression is an expression whose value cannot change and that can be evaluated at the compile time. A constant object that is initialized from a constant expression or constexpr functions is also a constant expression.</p>
+<pre><code>const int max_files = 20;           // max_files is a constant expression
+const int limit = max_files + 1;    // limit is a constant expression
+int staff_size = 27;                // staff_size is not a constant expression
+const int sz = get_size();          // sz is not a constant expression
+</code></pre>
+<p>In C++11 standard, we can ask the compiler to verify that a variable is a constant expression by declaring the variable in a constexpr declaration.</p>
+<pre><code>constexpr int mf = 20;          // 20 is a constant expression
+constexpr int limit = mf + 1;   // mf + 1 is a constant expression
+constexpr int sz = size();      // ok only if size is a constexpr function
+</code></pre>
+<p><strong>Literal Types</strong>: The types which can be used in a constant expression. Examples, arithmetic, reference and pointer types. <em>Note that pointers and references can be defined as constexprs but the values these can be initialized to are limited</em>:</p>
+<ul>
+<li>We can initialize a constexpr pointer from a nullptr or the literal 0.</li>
+<li>We can also point to (or bind to) an object that remains at a fixed address. Variable defined inside the functions are not stored a fixed address. Address of any object defined outside a function is fixed. Functions may define variables that exist across function calls, thereby having a fixed address. (Revisit)</li>
+</ul></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../../js/bootstrap.bundle.min.js"></script>
+        <script>
+            var base_url = "../..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../../js/base.js"></script>
+        <script src="../../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>
