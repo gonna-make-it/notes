@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nishant's Notes on Nishant Notes</title><link>https://notes.nishantbansal.in/</link><description>Recent content in Nishant's Notes on Nishant Notes</description><generator>Hugo</generator><language>en</language><atom:link href="https://notes.nishantbansal.in/index.xml" rel="self" type="application/rss+xml"/><item><title>Chapter 1</title><link>https://notes.nishantbansal.in/docs/cppprimer/ch01/</link><pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><guid>https://notes.nishantbansal.in/docs/cppprimer/ch01/</guid><description>&lt;h1 id="writing-a-simple-c-program">Writing a Simple C++ Program&lt;/h1>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>C++ Primer on Nishant Notes</title><link>https://notes.nishantbansal.in/docs/cppprimer/</link><description>Recent content in C++ Primer on Nishant Notes</description><generator>Hugo</generator><language>en</language><atom:link href="https://notes.nishantbansal.in/docs/cppprimer/index.xml" rel="self" type="application/rss+xml"/><item><title>Chapter 1</title><link>https://notes.nishantbansal.in/docs/cppprimer/ch01/</link><pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><guid>https://notes.nishantbansal.in/docs/cppprimer/ch01/</guid><description>&lt;h1 id="writing-a-simple-c-program">Writing a Simple C++ Program&lt;/h1>
 &lt;p>Every program has one or more functions, one of which must me main.&lt;/p>
 &lt;pre tabindex="0">&lt;code>int main() {
  return 0;
@@ -28,4 +28,4 @@
 &lt;li>boolean values&lt;/li>
 &lt;li>floating point numbers&lt;/li>
 &lt;/ul>
-&lt;p>Arithmetic types are divided into integral types (integers, characters and boolean) and floating-point types.&lt;/p></description></item><item><title>Search Results</title><link>https://notes.nishantbansal.in/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.nishantbansal.in/search/</guid><description/></item></channel></rss>
+&lt;p>Arithmetic types are divided into integral types (integers, characters and boolean) and floating-point types.&lt;/p></description></item></channel></rss>
