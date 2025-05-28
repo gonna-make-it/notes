@@ -1,18 +1,4 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nishant's Notes on Nishant Notes</title><link>https://notes.nishantbansal.in/</link><description>Recent content in Nishant's Notes on Nishant Notes</description><generator>Hugo</generator><language>en</language><atom:link href="https://notes.nishantbansal.in/index.xml" rel="self" type="application/rss+xml"/><item><title>Chapter 3</title><link>https://notes.nishantbansal.in/docs/cppprimer/ch03/</link><pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate><guid>https://notes.nishantbansal.in/docs/cppprimer/ch03/</guid><description>&lt;h1 id="strings-vectors-and-arrays">Strings, Vectors and Arrays&lt;/h1>
-&lt;h2 id="library-string-type">Library &lt;code>string&lt;/code> type&lt;/h2>
-&lt;h3 id="initialization">Initialization&lt;/h3>
-&lt;pre tabindex="0">&lt;code>string s1; // default initialization; s1 is empty string
-string s2 = s1; // s2 is a copy of s1
-string s3 = &amp;#34;hiya&amp;#34;; // s3 is a copy of the string literal
-string s4(3, &amp;#39;o&amp;#39;); // s4 is ooo
-
-string s5 = &amp;#34;hiya&amp;#34;; // copy initialization
-string s6(&amp;#34;hiya&amp;#34;); // direct initialization
-string s7(4, &amp;#39;o&amp;#39;); // direct initialization
-string s8 = string(4, &amp;#39;o&amp;#39;); // copy initialization using temporary object
-&lt;/code>&lt;/pre>&lt;h3 id="operations-on-strings">Operations on strings&lt;/h3>
-&lt;p>Operations can be defined by names (memeber functions) and operators symbols (+, &amp;laquo;, &amp;raquo;, +=).&lt;/p></description></item><item><title>Chapter 1</title><link>https://notes.nishantbansal.in/docs/cppprimer/ch01/</link><pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><guid>https://notes.nishantbansal.in/docs/cppprimer/ch01/</guid><description>&lt;h1 id="writing-a-simple-c-program">Writing a Simple C++ Program&lt;/h1>
-&lt;p>Every program has one or more functions, one of which must me main.&lt;/p>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Nishant's Notes on Nishant Notes</title><link>https://notes.nishantbansal.in/</link><description>Recent content in Nishant's Notes on Nishant Notes</description><generator>Hugo</generator><language>en</language><atom:link href="https://notes.nishantbansal.in/index.xml" rel="self" type="application/rss+xml"/><item><title>Chapter 1</title><link>https://notes.nishantbansal.in/docs/cppprimer/ch01/</link><pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><guid>https://notes.nishantbansal.in/docs/cppprimer/ch01/</guid><description>&lt;p>Every program has one or more functions, one of which must me main.&lt;/p>
 &lt;pre tabindex="0">&lt;code>int main() {
  return 0;
 }
@@ -29,8 +15,7 @@ string s8 = string(4, &amp;#39;o&amp;#39;); // copy initialization using tempora
 &lt;li>Stream is a sequence of characters read from ir written to an IO device.&lt;/li>
 &lt;li>Library defines four objects - cin (istream), cout (ostream), cerr(ostream) and clog(ostream). Each of this object is associated to the window running the program.&lt;/li>
 &lt;/ul>
-&lt;p>&lt;code>std::cout &amp;lt;&amp;lt; &amp;quot;This is a string literal&amp;quot; &amp;lt;&amp;lt; std::endl;&lt;/code>&lt;/p></description></item><item><title>Chapter 2</title><link>https://notes.nishantbansal.in/docs/cppprimer/ch02/</link><pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><guid>https://notes.nishantbansal.in/docs/cppprimer/ch02/</guid><description>&lt;h1 id="variables-and-basic-types">Variables and Basic Types&lt;/h1>
-&lt;h2 id="primitive-built-in-types">Primitive Built-in Types&lt;/h2>
+&lt;p>&lt;code>std::cout &amp;lt;&amp;lt; &amp;quot;This is a string literal&amp;quot; &amp;lt;&amp;lt; std::endl;&lt;/code>&lt;/p></description></item><item><title>Chapter 2</title><link>https://notes.nishantbansal.in/docs/cppprimer/ch02/</link><pubDate>Tue, 27 May 2025 00:00:00 +0000</pubDate><guid>https://notes.nishantbansal.in/docs/cppprimer/ch02/</guid><description>&lt;h2 id="primitive-built-in-types">Primitive Built-in Types&lt;/h2>
 &lt;p>C++ primitive types include arithmetic types and a special type named void.&lt;/p>
 &lt;p>Void type has no associated value and can be used in only a few cases like the return type of a function which does not return any value.&lt;/p>
 &lt;h3 id="arithmetic-types">Arithmetic Types&lt;/h3>
@@ -41,4 +26,17 @@ string s8 = string(4, &amp;#39;o&amp;#39;); // copy initialization using tempora
 &lt;li>boolean values&lt;/li>
 &lt;li>floating point numbers&lt;/li>
 &lt;/ul>
-&lt;p>Arithmetic types are divided into integral types (integers, characters and boolean) and floating-point types.&lt;/p></description></item><item><title>Search Results</title><link>https://notes.nishantbansal.in/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.nishantbansal.in/search/</guid><description/></item></channel></rss>
+&lt;p>Arithmetic types are divided into integral types (integers, characters and boolean) and floating-point types.&lt;/p>
+&lt;p>The size of arithmetic types varies across machines. Hence the largest value a type can represent also varies.&lt;/p></description></item><item><title>Chapter 3</title><link>https://notes.nishantbansal.in/docs/cppprimer/ch03/</link><pubDate>Wed, 28 May 2025 00:00:00 +0000</pubDate><guid>https://notes.nishantbansal.in/docs/cppprimer/ch03/</guid><description>&lt;h2 id="library-string-type">Library &lt;code>string&lt;/code> type&lt;/h2>
+&lt;h3 id="initialization">Initialization&lt;/h3>
+&lt;pre tabindex="0">&lt;code>string s1; // default initialization; s1 is empty string
+string s2 = s1; // s2 is a copy of s1
+string s3 = &amp;#34;hiya&amp;#34;; // s3 is a copy of the string literal
+string s4(3, &amp;#39;o&amp;#39;); // s4 is ooo
+
+string s5 = &amp;#34;hiya&amp;#34;; // copy initialization
+string s6(&amp;#34;hiya&amp;#34;); // direct initialization
+string s7(4, &amp;#39;o&amp;#39;); // direct initialization
+string s8 = string(4, &amp;#39;o&amp;#39;); // copy initialization using temporary object
+&lt;/code>&lt;/pre>&lt;h3 id="operations-on-strings">Operations on strings&lt;/h3>
+&lt;p>Operations can be defined by names (memeber functions) and operators symbols (+, &amp;laquo;, &amp;raquo;, +=).&lt;/p></description></item><item><title>Search Results</title><link>https://notes.nishantbansal.in/search/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://notes.nishantbansal.in/search/</guid><description/></item></channel></rss>
