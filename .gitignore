@@ -2,9 +2,6 @@
 # Dependency directories
 node_modules/
 
-# Package lock file
-package-lock.json
-
 ### Hugo ###
 # Generated files by hugo
 **/public/
